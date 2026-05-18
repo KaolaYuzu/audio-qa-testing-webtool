@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Audio QA Testing Web v1.3.1</title>
+<title>Audio QA Testing Web v1.3.2</title>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap');
 
@@ -591,7 +591,7 @@ font-style: italic;
 <div class="app-shell">
 
   <header>
-    <h1>Audio <span>QA</span> Testing Web <span style="color:var(--muted);font-size:14px;">v1.3.1</span></h1>
+    <h1>Audio <span>QA</span> Testing Web <span style="color:var(--muted);font-size:14px;">v1.3.2</span></h1>
     <div class="header-sub">File-based signal screening &middot; Live recording &middot; Batch queue &middot; Human listening record &middot; QA documentation</div>
     <div class="disclaimer-banner">
       &#9888; This tool provides file-based audio signal screening and QA documentation support.
@@ -680,6 +680,22 @@ font-style: italic;
   </div>
 
   <!-- 6. QA Record -->
+
+  <!-- 7. Single-file Export (immediately after single-file analysis area) -->
+
+  <div class="card" id="section-export">
+    <div class="card-title"><span class="icon">&#128190;</span> Export — Single File</div>
+    <p style="font-size:13px;color:var(--text-dim);margin-bottom:14px;">
+      Exports include file metadata, computed metrics, rule-based flags, silence gap summary, and all QA form fields.
+    </p>
+    <div class="btn-row">
+      <button class="btn btn-success" id="exportCSV">Export CSV</button>
+      <button class="btn btn-primary" id="exportJSON">Export JSON</button>
+      <button class="btn btn-danger"  id="resetBtn">Reset All</button>
+    </div>
+  </div>
+
+  <!-- 8. Batch Upload — Multi-file Queue -->
 
   <!-- ============================================================
        v1.3 NEW — Batch Upload / Multi-file Queue
@@ -808,20 +824,6 @@ font-style: italic;
     </div>
   </div>
 
-  <!-- 7. Export -->
-
-  <div class="card" id="section-export">
-    <div class="card-title"><span class="icon">&#128190;</span> Export</div>
-    <p style="font-size:13px;color:var(--text-dim);margin-bottom:14px;">
-      Exports include file metadata, computed metrics, rule-based flags, silence gap summary, and all QA form fields.
-    </p>
-    <div class="btn-row">
-      <button class="btn btn-success" id="exportCSV">Export CSV</button>
-      <button class="btn btn-primary" id="exportJSON">Export JSON</button>
-      <button class="btn btn-danger"  id="resetBtn">Reset All</button>
-    </div>
-  </div>
-
   <!-- 8. Limitations -->
 
   <div class="card" id="section-limits">
@@ -854,7 +856,7 @@ font-style: italic;
     </div>
   </div>
 
-  <footer>Audio QA Testing Web v1.3.1 &middot; Runs entirely in-browser &middot; No data is sent to any server &middot; <span id="footerYear"></span></footer>
+  <footer>Audio QA Testing Web v1.3.2 &middot; Runs entirely in-browser &middot; No data is sent to any server &middot; <span id="footerYear"></span></footer>
 
 </div>
 
